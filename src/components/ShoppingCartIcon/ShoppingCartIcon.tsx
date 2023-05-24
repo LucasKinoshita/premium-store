@@ -1,4 +1,4 @@
-import { Cart as CartIcon } from '@styled-icons/ionicons-outline/Cart'
+import { Cart as CartIcon } from '@styled-icons/ionicons-outline'
 import { Badge, Wrapper } from './styles'
 
 type ShoppingCartIconProps = {
