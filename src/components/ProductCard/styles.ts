@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 25rem;
+  max-width: 20rem;
   width: 100%;
 `
 
@@ -12,6 +12,7 @@ export const ImageWrapper = styled.div`
   width: 100%;
 
   > img {
+    display: block;
     max-width: 100%;
     object-fit: cover;
   }

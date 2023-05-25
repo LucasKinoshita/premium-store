@@ -1,4 +1,4 @@
-import { Slider } from '../Slider'
+import Slider from '../Slider'
 import { ImageWrapper, Wrapper } from './styles'
 
 export type BannerSliderProps = {

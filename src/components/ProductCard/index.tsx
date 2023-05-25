@@ -7,7 +7,7 @@ import {
   Wrapper
 } from './styles'
 
-type ProductCardProps = {
+export type ProductCardProps = {
   imageUrl: string
   name: string
   price: string
