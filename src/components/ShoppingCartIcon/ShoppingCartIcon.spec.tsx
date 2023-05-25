@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import ShoppingCartIcon from './ShoppingCartIcon'
+import ShoppingCartIcon from '.'
 
 describe('<ShoppingCartIcon />', () => {
   it('should render ShoppingCartIcon without badge', () => {

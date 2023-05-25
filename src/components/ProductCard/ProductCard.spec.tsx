@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
-import ProductCard from './ProductCard'
-import productMock from './mock'
+import ProductCard from '.'
+import { productMock } from './mock'
 
 describe('<ProductCard />', () => {
   it('should render information of ProductCard', () => {

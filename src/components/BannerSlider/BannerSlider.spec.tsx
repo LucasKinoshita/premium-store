@@ -1,6 +1,6 @@
 import 'match-media-mock'
 import { render } from '@testing-library/react'
-import BannerSlider from './BannerSlider'
+import BannerSlider from '.'
 import bannerSliderMock from './mock'
 
 describe('<BannerSlider />', () => {
