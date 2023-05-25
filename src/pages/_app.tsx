@@ -1,7 +1,7 @@
-import { AppProps } from 'next/app'
 import Head from 'next/head'
-
-import GlobalStyles from '@/styles/global'
+import { AppProps } from 'next/app'
+import { Header } from '../components/Header'
+import GlobalStyles from '../styles/global'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -11,6 +11,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="A project starter" />
       </Head>
       <GlobalStyles />
+      <Header />
       <Component {...pageProps} />
     </>
   )
