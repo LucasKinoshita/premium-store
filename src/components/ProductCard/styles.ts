@@ -6,6 +6,11 @@ export const Wrapper = styled.div`
   height: 100%;
   max-width: 20rem;
   width: 100%;
+
+  a {
+    text-decoration: none;
+    color: #1d1d1d;
+  }
 `
 
 export const ImageWrapper = styled.div`

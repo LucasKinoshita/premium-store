@@ -6,6 +6,7 @@ import {
   ProductPrice,
   Wrapper
 } from './styles'
+import Link from 'next/link'
 
 export type ProductCardProps = {
   imageUrl: string
@@ -16,20 +17,22 @@ export type ProductCardProps = {
 const ProductCard = ({ imageUrl, name, price }: ProductCardProps) => {
   return (
     <Wrapper>
-      <ImageWrapper>
-        <img src={imageUrl} alt={name} />
-      </ImageWrapper>
+      <Link href="product/product-name">
+        <ImageWrapper>
+          <img src={imageUrl} alt={name} />
+        </ImageWrapper>
 
-      <ProductInfoWrapper>
-        <div>
-          <ProductName>{name}</ProductName>
-          <ProductPrice>R$ {price}</ProductPrice>
-        </div>
+        <ProductInfoWrapper>
+          <div>
+            <ProductName>{name}</ProductName>
+            <ProductPrice>R$ {price}</ProductPrice>
+          </div>
 
-        <button type="button">
-          <HeartIcon />
-        </button>
-      </ProductInfoWrapper>
+          <button type="button">
+            <HeartIcon />
+          </button>
+        </ProductInfoWrapper>
+      </Link>
     </Wrapper>
   )
 }

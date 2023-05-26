@@ -6,11 +6,7 @@ const Header = () => {
   return (
     <Wrapper>
       <Link href="/">
-        <img
-          src="assets/logo.svg"
-          alt="Premium store logo"
-          aria-label="go to home"
-        />
+        <h1>Premium Store.</h1>
       </Link>
       <ShoppingCartIcon />
     </Wrapper>
