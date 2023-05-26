@@ -6,7 +6,9 @@ export const Wrapper = styled.header`
   justify-content: space-between;
   padding: 2rem 0;
 
-  > img {
-    width: 15rem;
+  a {
+    color: #1d1d1d;
+    font-size: 1.2rem;
+    text-decoration: none;
   }
 `
