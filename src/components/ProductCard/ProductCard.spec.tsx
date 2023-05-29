@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
-import ProductCard from '.'
 import { productMock } from './mock'
+import ProductCard from '.'
 
 describe('<ProductCard />', () => {
   it('should render information of ProductCard', () => {
@@ -11,6 +11,6 @@ describe('<ProductCard />', () => {
     expect(
       screen.getByRole('heading', { name: /name of product/i })
     ).toBeInTheDocument()
-    expect(screen.getByRole('button')).toBeInTheDocument()
+    expect(screen.getByLabelText(/add to cart/i)).toBeInTheDocument()
   })
 })

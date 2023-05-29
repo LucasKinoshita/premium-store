@@ -1,15 +1,19 @@
 import { Cart as CartIcon } from '@styled-icons/ionicons-outline'
 import { Badge, Wrapper } from './styles'
+import Link from 'next/link'
+import { useCart } from '../../hooks/useCart'
 
-type ShoppingCartIconProps = {
-  quantity?: number
-}
+const ShoppingCartIcon = () => {
+  const { items } = useCart()
 
-const ShoppingCartIcon = ({ quantity = 0 }: ShoppingCartIconProps) => {
   return (
     <Wrapper>
-      <CartIcon aria-label="Shopping cart" />
-      {Boolean(quantity) && <Badge aria-label="Cart items">{quantity}</Badge>}
+      <Link href="/cart">
+        <CartIcon aria-label="Shopping cart" />
+        {Boolean(items?.length) && (
+          <Badge aria-label="Cart items">{items?.length}</Badge>
+        )}
+      </Link>
     </Wrapper>
   )
 }

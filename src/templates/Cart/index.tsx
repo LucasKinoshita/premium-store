@@ -1,27 +1,44 @@
 import Header from '../../components/Header'
 import CartItem from '../../components/CartItem'
 import Order from '../../components/Order'
-import { ProductTemplateProps } from '../Product'
 import { Container } from '../../templates/Home/styles'
-import { Wrapper } from './styles'
+import { useCart } from '../../hooks/useCart'
+import {
+  BackToHomeButton,
+  NoProductsMessage,
+  NoProductsWrapper,
+  Wrapper
+} from './styles'
 
-export type CartTemplateProps = {
-  products: ProductTemplateProps[]
-}
+const CartTemplate = () => {
+  const { items, order } = useCart()
 
-const CartTemplate = ({ products }: CartTemplateProps) => {
   return (
     <Container>
       <Header />
 
       <Wrapper>
         <div>
-          {products.map((product, index) => (
-            <CartItem key={`product-${index}`} {...product} />
-          ))}
+          {items.length ? (
+            items.map((product, index) => (
+              <CartItem key={`product-${index}`} {...product} />
+            ))
+          ) : (
+            <NoProductsWrapper>
+              <NoProductsMessage>does not have products.</NoProductsMessage>
+              <BackToHomeButton href="/" aria-label="go to products">
+                Go to products
+              </BackToHomeButton>
+            </NoProductsWrapper>
+          )}
         </div>
 
-        <Order total="160.00" subtotal="160.00" onClick={() => ''} />
+        <Order
+          total={order.total}
+          subtotal={order.subtotal}
+          descount={order.descount}
+          onClick={() => ''}
+        />
       </Wrapper>
     </Container>
   )

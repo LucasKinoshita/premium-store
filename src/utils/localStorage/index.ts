@@ -1,3 +1,5 @@
+import { ProductCardProps } from '../../components/ProductCard'
+
 const APP_KEY = 'PREMIUM_STORE'
 
 export const getStorageItem = (key: string) => {
@@ -7,7 +9,7 @@ export const getStorageItem = (key: string) => {
   return JSON.parse(data!)
 }
 
-export const setStorageItem = (key: string, value: string[]) => {
+export const setStorageItem = (key: string, value: ProductCardProps[]) => {
   if (typeof window === 'undefined') return
 
   const data = JSON.stringify(value)
