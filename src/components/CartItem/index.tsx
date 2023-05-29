@@ -10,13 +10,18 @@ import {
   CartItemTitleWrapper,
   CartItemWrapper
 } from './styles'
+import { useCart } from '../../hooks/useCart'
+import { formatValueToCurrency } from '../../utils/currency'
 
 const CartItem = ({
+  id,
   name,
   price,
   description,
   imageUrl
 }: ProductTemplateProps) => {
+  const { deleteItem } = useCart()
+
   return (
     <CartItemWrapper>
       <img src={imageUrl} alt={name} />
@@ -24,7 +29,11 @@ const CartItem = ({
         <CartItemTitleWrapper>
           <h2>{name}</h2>
 
-          <CartItemDeleteButton type="button" aria-label="delete cart item">
+          <CartItemDeleteButton
+            type="button"
+            aria-label="delete cart item"
+            onClick={() => deleteItem(id)}
+          >
             <TrashIcon />
           </CartItemDeleteButton>
         </CartItemTitleWrapper>
@@ -33,7 +42,7 @@ const CartItem = ({
 
         <CartItemFooter>
           <CartItemQuantity type="number" value="1" onChange={() => ''} />
-          <CartItemPrice>R$ {price}</CartItemPrice>
+          <CartItemPrice>{formatValueToCurrency(price)}</CartItemPrice>
         </CartItemFooter>
       </CartItemContent>
     </CartItemWrapper>

@@ -20,7 +20,9 @@ describe('<ProductTemplate />', () => {
     expect(
       screen.getByRole('heading', { name: /name of product/i })
     ).toBeInTheDocument()
-    expect(screen.getByText(/R\$ 250.50/i)).toBeInTheDocument()
+    expect(
+      screen.getByText(/R\$ 250,50/i, { collapseWhitespace: true })
+    ).toBeInTheDocument()
     expect(
       screen.getByRole('heading', { name: /descricao/i })
     ).toBeInTheDocument()

@@ -12,17 +12,22 @@ import {
   ProductWrapper,
   Wrapper
 } from './styles'
+import { useCart } from '../../hooks/useCart'
+import { formatValueToCurrency } from '../../utils/currency'
 
 export type ProductTemplateProps = ProductCardProps & {
   description: string
 }
 
 const ProductTemplate = ({
+  id,
   name,
   price,
   description,
   imageUrl
 }: ProductTemplateProps) => {
+  const { addToCart } = useCart()
+
   return (
     <Wrapper>
       <Header />
@@ -35,11 +40,17 @@ const ProductTemplate = ({
 
         <ProductInfoWrapper>
           <ProductName>{name}</ProductName>
-          <ProductPrice>R$ {price}</ProductPrice>
+          <ProductPrice>{formatValueToCurrency(price)}</ProductPrice>
           <ProductDescriptionTitle>Descricao</ProductDescriptionTitle>
           <ProductDescription>{description}</ProductDescription>
 
-          <AddToCartButton type="button" aria-label="add product to cart">
+          <AddToCartButton
+            type="button"
+            aria-label="add product to cart"
+            onClick={() =>
+              addToCart({ id, name, price, description, imageUrl })
+            }
+          >
             Adicionar ao carrinho
           </AddToCartButton>
         </ProductInfoWrapper>

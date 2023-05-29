@@ -1,3 +1,4 @@
+import { formatValueToCurrency } from '../../utils/currency'
 import {
   OrderButton,
   OrderDescount,
@@ -9,28 +10,28 @@ import {
 } from './styles'
 
 export type OrderProps = {
-  subtotal: string
-  descount?: string
-  total: string
+  subtotal: number
+  descount?: number
+  total: number
   onClick: () => void
 }
 
-const Order = ({ subtotal, descount = '0.00', total, onClick }: OrderProps) => {
+const Order = ({ subtotal, descount = 0, total, onClick }: OrderProps) => {
   return (
     <OrderWrapper>
       <OrderTitle>Resumo do pedido</OrderTitle>
       <OrderSubtotal>
-        Subtotal: <span>R$ {subtotal}</span>
+        Subtotal: <span>{formatValueToCurrency(subtotal)}</span>
       </OrderSubtotal>
 
       <OrderDescount>
-        Desconto: <span>R$ {descount}</span>
+        Desconto: <span>{formatValueToCurrency(descount)}</span>
       </OrderDescount>
 
       <OrderDivider />
 
       <OrderTotal>
-        Total <span>R$ {total}</span>
+        Total <span>{formatValueToCurrency(total)}</span>
       </OrderTotal>
 
       <OrderButton type="button" onClick={onClick} aria-label="checkout">
