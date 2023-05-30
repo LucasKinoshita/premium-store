@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { AppProps } from 'next/app'
+import { CartProvider } from 'context/Cart'
 import GlobalStyles from 'styles/global'
-import { CartProvider } from 'hooks/useCart'
 
 function App({ Component, pageProps }: AppProps) {
   return (
