@@ -15,9 +15,7 @@ import {
 import { useCart } from '../../hooks/useCart'
 import { formatValueToCurrency } from '../../utils/currency'
 
-export type ProductTemplateProps = ProductCardProps & {
-  description: string
-}
+export type ProductTemplateProps = ProductCardProps
 
 const ProductTemplate = ({
   id,

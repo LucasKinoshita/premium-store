@@ -11,7 +11,8 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public"
+    "build-storybook": "build-storybook -s ./public",
+    "start:api": "json-server --watch db.json --port 5000 --delay=1000"
   },
   "lint-staged": {
     "src/**/*": [
@@ -54,6 +55,7 @@
     "jest": "^29.4.3",
     "jest-environment-jsdom": "^29.4.3",
     "jest-styled-components": "^7.1.1",
+    "json-server": "^0.17.3",
     "lint-staged": "^13.1.2",
     "prettier": "2.8.4"
   }

@@ -28,8 +28,9 @@ export const ProductInfoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
+  gap: 1rem;
 
-  > button {
+  button {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -46,8 +47,7 @@ export const ProductName = styled.h3`
 `
 
 export const ProductPrice = styled.span`
-  display: inline-block;
+  display: flex;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 0.5rem;
 `

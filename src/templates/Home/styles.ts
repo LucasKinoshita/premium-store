@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ProductsWrapper = styled.section`
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
