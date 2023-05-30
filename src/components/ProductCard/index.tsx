@@ -1,5 +1,7 @@
 import Link from 'next/link'
+import { useCart } from '../../hooks/useCart'
 import { Cart as CartIcon } from '@styled-icons/ionicons-outline'
+import { formatValueToCurrency } from '../../utils/currency'
 import {
   ImageWrapper,
   ProductInfoWrapper,
@@ -7,8 +9,6 @@ import {
   ProductPrice,
   Wrapper
 } from './styles'
-import { useCart } from '../../hooks/useCart'
-import { formatValueToCurrency } from '../../utils/currency'
 
 export type ProductCardProps = {
   description: string
@@ -29,14 +29,14 @@ const ProductCard = ({
 
   return (
     <Wrapper>
-      <Link href="product/product-name">
+      <Link href={`/product/${id}`}>
         <ImageWrapper>
           <img src={imageUrl} alt={name} />
         </ImageWrapper>
       </Link>
 
       <ProductInfoWrapper>
-        <Link href="product/product-name">
+        <Link href={`/product/${id}`}>
           <ProductName>{name}</ProductName>
           <ProductPrice>{formatValueToCurrency(price)}</ProductPrice>
         </Link>

@@ -1,17 +1,20 @@
 import HomeTemplate from '../templates/Home'
 import { HomeTemplateProps } from '../templates/Home'
 import bannerItemsMock from '../components/BannerSlider/mock'
-import { productsMock } from '../components/ProductCard/mock'
+import { GetStaticProps } from 'next'
 
 export default function Home(props: HomeTemplateProps) {
   return <HomeTemplate {...props} />
 }
 
-export function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await fetch('http://localhost:5000/products')
+  const data = await response.json()
+
   return {
     props: {
       bannerItems: bannerItemsMock,
-      products: productsMock
+      products: data
     }
   }
 }

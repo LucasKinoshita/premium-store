@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "imageUrl": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Câmera Digital",
+      "description": "Câmera Vlog Sony ZV-1F para criadores de conteúdo e vloggers, sensor grande de 1 com lente grande angular de 20 mm e embalado com recursos fáceis de usar, projetado especificamente para vloggers e criadores de vídeo online.",
+      "price": 5999.9
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Controle Dualshock",
+      "description": "Tem produtos em oferta nas diversas categorias no site da Amazon, mas se o que você quer é a melhor oportunidade para comprar um Controle Dualshock 4 para o PlayStation 4, essa é a hora certa. Sua experiência com os jogos do Playstation, com certeza, não são as mesmas depois de experimentar o Dualshock 4.",
+      "price": 289
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Lente Objetiva",
+      "description": "ompacta, leve e uma excelente lente para o dia a dia, a Canon EF 50mm f/1.8 STM é uma grande introdução ao mundo das lentes EOS premium. Com uma distância focal efetiva de 80 mm em câmeras APS-C, 50 mm em câmeras full-frame, é uma excelente lente para retratos, ação e mesmo fotografia noturna.",
+      "price": 838
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://images.pexels.com/photos/1037999/pexels-photo-1037999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Headphone Philips",
+      "description": "Headphone Philips bluetooth on-ear com microfone e energia para 15 horas na cor preto TAH1205BK/00",
+      "price": 129
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://images.pexels.com/photos/1420709/pexels-photo-1420709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Teclado Gamer vx gaming",
+      "description": "No mundo gamer, inúmeros fundamentos são indispensáveis para o sucesso. Parte disto está nos componentes do jogador, ter periféricos de qualidade e que atendam às necessidades são um passo importante rumo a vitória.",
+      "price": 67.19
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://images.pexels.com/photos/733854/pexels-photo-733854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Caderno Capa Dura",
+      "description": "O Caderno Espiral Capa Dura Universitário 1 Matéria Zip Preto 80 Folhas possui capa dura, folhas pautadas e espiral colorido. Ideal para o dia a dia na escola ou na faculdade.",
+      "price": 15.9
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Relógio Masculino Esportivo",
+      "description": "Design exclusivo: relógio clássico minimalista, o mostrador grande simples e elegante com submostrador separado de segundos o diferencia dos outros relógios; este é um relógio unissex, que oferece experiência de uso em viagens perfeita para você.",
+      "price": 69.9
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://images.pexels.com/photos/3183195/pexels-photo-3183195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Teclado e Mouse",
+      "description": "Projetado para máxima eficiência! Aumente a sua produtividade diária com essa combinação de teclado ABNT2 e mouse sem fio criado para durar.",
+      "price": 149.99
+    }
+  ]
+}
