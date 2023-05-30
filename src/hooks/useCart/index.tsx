@@ -52,7 +52,7 @@ const CartProvider = ({ children }: CartProviderProps) => {
   const calculateOrder = useCallback(() => {
     const cardItemsCopy = [...cartItems]
 
-    if (cardItemsCopy.length) {
+    if (cardItemsCopy) {
       const descount = 0
 
       const subtotal = cardItemsCopy.reduce((acc, item) => {
