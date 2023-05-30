@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import ShoppingCartIcon from '../ShoppingCartIcon'
+import ShoppingCartIcon from 'components/ShoppingCartIcon'
 import { Wrapper } from './styles'
 
 const Header = () => {

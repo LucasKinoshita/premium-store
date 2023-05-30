@@ -1,4 +1,4 @@
-import { formatValueToCurrency } from '../../utils/currency'
+import { formatValueToCurrency } from 'utils/currency'
 import {
   OrderButton,
   OrderDescount,

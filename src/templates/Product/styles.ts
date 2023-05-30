@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { Container } from '../../templates/Home/styles'
 import Link from 'next/link'
+import styled from 'styled-components'
+import { Container } from 'templates/Home/styles'
 
 export const Wrapper = styled(Container)``
 

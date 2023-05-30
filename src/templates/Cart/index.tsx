@@ -1,8 +1,8 @@
-import Header from '../../components/Header'
-import CartItem from '../../components/CartItem'
-import Order from '../../components/Order'
-import { Container } from '../../templates/Home/styles'
-import { useCart } from '../../hooks/useCart'
+import { useCart } from 'hooks/useCart'
+import Header from 'components/Header'
+import CartItem from 'components/CartItem'
+import Order from 'components/Order'
+import { Container } from 'templates/Home/styles'
 import {
   BackToHomeButton,
   NoProductsMessage,

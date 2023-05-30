@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
+import { CartContext } from 'hooks/useCart'
+import { productMock } from 'components/ProductCard/mock'
 import ShoppingCartIcon from '.'
-import { CartContext } from '../../hooks/useCart'
-import { productMock } from '../ProductCard/mock'
 
 describe('<ShoppingCartIcon />', () => {
   it('should render ShoppingCartIcon without badge', () => {
@@ -15,9 +15,10 @@ describe('<ShoppingCartIcon />', () => {
     render(
       <CartContext.Provider
         value={{
-          items: [{ ...productMock }],
+          items: [productMock],
           addToCart: jest.fn(),
           deleteItem: jest.fn(),
+          updatedQuantity: jest.fn(),
           order: { subtotal: 15, total: 15 }
         }}
       >

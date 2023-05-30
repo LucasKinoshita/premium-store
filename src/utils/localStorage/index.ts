@@ -1,4 +1,4 @@
-import { ProductCardProps } from '../../components/ProductCard'
+import { ProductCardProps } from 'components/ProductCard'
 
 const APP_KEY = 'PREMIUM_STORE'
 

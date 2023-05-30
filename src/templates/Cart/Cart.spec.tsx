@@ -1,23 +1,23 @@
 import { render, screen } from '@testing-library/react'
-import { productsMock } from '../../components/ProductCard/mock'
+import { CartContext } from 'hooks/useCart'
+import { productsMock } from 'components/ProductCard/mock'
 import CartTemplate from '.'
-import { CartContext } from '../../hooks/useCart'
 
-jest.mock('../../components/Header', () => ({
+jest.mock('components/Header', () => ({
   __esModule: true,
   default: function Mock() {
     return <div data-testid="Mock Header" />
   }
 }))
 
-jest.mock('../../components/CartItem', () => ({
+jest.mock('components/CartItem', () => ({
   __esModule: true,
   default: function Mock() {
     return <div data-testid="Mock CartItem" />
   }
 }))
 
-jest.mock('../../components/Order', () => ({
+jest.mock('components/Order', () => ({
   __esModule: true,
   default: function Mock() {
     return <div data-testid="Mock Order" />
@@ -29,9 +29,13 @@ describe('<CartTemplate />', () => {
     render(
       <CartContext.Provider
         value={{
-          items: [...productsMock],
+          items: [
+            { ...productsMock[0], quantity: 1 },
+            { ...productsMock[1], quantity: 1 }
+          ],
           addToCart: jest.fn(),
           deleteItem: jest.fn(),
+          updatedQuantity: jest.fn(),
           order: { subtotal: 15, total: 15 }
         }}
       >
@@ -40,7 +44,7 @@ describe('<CartTemplate />', () => {
     )
 
     expect(screen.getByTestId('Mock Header')).toBeInTheDocument()
-    expect(screen.getAllByTestId('Mock CartItem')).toHaveLength(8)
+    expect(screen.getAllByTestId('Mock CartItem')).toHaveLength(2)
     expect(screen.getByTestId('Mock Order')).toBeInTheDocument()
   })
 })
