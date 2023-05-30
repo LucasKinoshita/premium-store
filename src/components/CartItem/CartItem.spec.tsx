@@ -4,7 +4,7 @@ import CartItem from '.'
 
 describe('<CartItem />', () => {
   it('should render CartItem', () => {
-    render(<CartItem {...productMock} />)
+    render(<CartItem {...productMock} quantity={1} />)
 
     expect(screen.getByRole('img')).toBeInTheDocument()
     expect(

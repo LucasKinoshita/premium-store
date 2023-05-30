@@ -16,7 +16,6 @@ const CartTemplate = () => {
   return (
     <Container>
       <Header />
-
       <Wrapper>
         <div>
           {items.length ? (
