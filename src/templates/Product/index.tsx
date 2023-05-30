@@ -1,6 +1,8 @@
-import Header from '../../components/Header'
-import { ProductCardProps } from '../../components/ProductCard'
+import { useCart } from 'hooks/useCart'
+import Header from 'components/Header'
+import { ProductCardProps } from 'components/ProductCard'
 import { ArrowBack } from '@styled-icons/ionicons-outline'
+import { formatValueToCurrency } from 'utils/currency'
 import {
   AddToCartButton,
   BackButton,
@@ -12,8 +14,6 @@ import {
   ProductWrapper,
   Wrapper
 } from './styles'
-import { useCart } from '../../hooks/useCart'
-import { formatValueToCurrency } from '../../utils/currency'
 
 export type ProductTemplateProps = ProductCardProps
 

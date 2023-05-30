@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { productMock } from '../ProductCard/mock'
+import { productMock } from 'components/ProductCard/mock'
 import CartItem from '.'
 
 describe('<CartItem />', () => {

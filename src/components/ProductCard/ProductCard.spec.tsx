@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { productMock } from './mock'
+import { productMock } from 'components/ProductCard/mock'
 import ProductCard from '.'
 
 describe('<ProductCard />', () => {

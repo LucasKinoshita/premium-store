@@ -1,7 +1,7 @@
+import Link from 'next/link'
+import { useCart } from 'hooks/useCart'
 import { Cart as CartIcon } from '@styled-icons/ionicons-outline'
 import { Badge, Wrapper } from './styles'
-import Link from 'next/link'
-import { useCart } from '../../hooks/useCart'
 
 const ShoppingCartIcon = () => {
   const { items } = useCart()

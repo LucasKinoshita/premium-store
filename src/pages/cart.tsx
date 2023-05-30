@@ -1,4 +1,4 @@
-import CartTemplate from '../templates/Cart'
+import CartTemplate from 'templates/Cart'
 
 const Cart = () => {
   return <CartTemplate />

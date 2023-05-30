@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
+import { productMock } from 'components/ProductCard/mock'
 import ProductTemplate from '.'
-import { productMock } from '../../components/ProductCard/mock'
 
-jest.mock('../../components/Header', () => ({
+jest.mock('components/Header', () => ({
   __esModule: true,
   default: function Mock() {
     return <div data-testid="Mock Header" />

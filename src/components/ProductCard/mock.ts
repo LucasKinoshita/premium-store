@@ -4,7 +4,8 @@ export const productMock = {
     'https://images.pexels.com/photos/3944104/pexels-photo-3944104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   name: 'Name of product',
   description: 'description text',
-  price: 250.5
+  price: 250.5,
+  quantity: 1
 }
 
 export const productsMock = [

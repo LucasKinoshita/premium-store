@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next'
-import ProductTemplate, { ProductTemplateProps } from '../../templates/Product'
+import ProductTemplate, { ProductTemplateProps } from 'templates/Product'
 import { useRouter } from 'next/router'
 
 const Product = (props: ProductTemplateProps) => {

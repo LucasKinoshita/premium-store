@@ -5,9 +5,9 @@ import {
   useEffect,
   useState
 } from 'react'
-import { getStorageItem, setStorageItem } from '../../utils/localStorage'
-import { ProductCardProps } from '../../components/ProductCard'
-import { OrderProps } from '../../components/Order'
+import { getStorageItem, setStorageItem } from 'utils/localStorage'
+import { ProductCardProps } from 'components/ProductCard'
+import { OrderProps } from 'components/Order'
 
 type ItemProps = ProductCardProps & {
   quantity: number
@@ -15,7 +15,7 @@ type ItemProps = ProductCardProps & {
 
 export type CartContextData = {
   items: ItemProps[]
-  addToCart: (data: ItemProps) => void
+  addToCart: (data: ProductCardProps) => void
   order: Omit<OrderProps, 'onClick'>
   deleteItem: (id: number) => void
   updatedQuantity: (id: number, quantity: number) => void
@@ -79,7 +79,7 @@ const CartProvider = ({ children }: CartProviderProps) => {
     setStorageItem('cartItems', items)
   }
 
-  const addToCart = (data: ItemProps) => {
+  const addToCart = (data: ProductCardProps) => {
     const cardItemsCopy = [...cartItems]
     const item = cardItemsCopy.find((product) => product.id === data.id)
 

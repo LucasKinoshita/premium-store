@@ -1,7 +1,7 @@
-import BannerSlider from '../../components/BannerSlider'
-import Header from '../../components/Header'
-import ProductCard from '../../components/ProductCard'
-import { ProductCardProps } from '../../components/ProductCard'
+import BannerSlider from 'components/BannerSlider'
+import Header from 'components/Header'
+import ProductCard from 'components/ProductCard'
+import { ProductCardProps } from 'components/ProductCard'
 import { ProductsWrapper, Container } from './styles'
 
 export type HomeTemplateProps = {
