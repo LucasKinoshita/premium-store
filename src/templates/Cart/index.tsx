@@ -1,4 +1,4 @@
-import { useCart } from 'hooks/useCart'
+import useCart from 'hooks/useCart'
 import Header from 'components/Header'
 import CartItem from 'components/CartItem'
 import Order from 'components/Order'

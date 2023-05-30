@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { CartContext } from 'hooks/useCart'
+import { CartContext } from 'context/Cart'
 import { productsMock } from 'components/ProductCard/mock'
 import CartTemplate from '.'
 
