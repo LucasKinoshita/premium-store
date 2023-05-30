@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react'
-import { useCart } from '../../hooks/useCart'
+import useCart from '../../hooks/useCart'
 import { ProductTemplateProps } from '../../templates/Product'
 import { formatValueToCurrency } from '../../utils/currency'
 import { Trash as TrashIcon } from '@styled-icons/ionicons-outline'

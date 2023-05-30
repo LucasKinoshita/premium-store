@@ -1,4 +1,4 @@
-import { useCart } from 'hooks/useCart'
+import useCart from 'hooks/useCart'
 import Header from 'components/Header'
 import { ProductCardProps } from 'components/ProductCard'
 import { ArrowBack } from '@styled-icons/ionicons-outline'

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useCart } from 'hooks/useCart'
+import useCart from 'hooks/useCart'
 import { Cart as CartIcon } from '@styled-icons/ionicons-outline'
 import { formatValueToCurrency } from 'utils/currency'
 import {
