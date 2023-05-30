@@ -66,24 +66,26 @@ const CartProvider = ({ children }: CartProviderProps) => {
     calculateOrder()
   }, [cartItems, calculateOrder])
 
+  const saveData = (items: ProductCardProps[]) => {
+    setCartItems(items)
+    setStorageItem('cartItems', items)
+  }
+
   const addToCart = (data: ProductCardProps) => {
     if (cartItems) {
       const items = [...cartItems, data]
-      setCartItems(items)
-      setStorageItem('cartItems', items)
+      saveData(items)
 
       return
     }
 
-    setStorageItem('cartItems', [{ ...data }])
-    setCartItems([{ ...data }])
+    saveData([{ ...data }])
   }
 
   const deleteItem = (id: number) => {
     if (cartItems) {
       const items = cartItems.filter((item) => item.id !== id)
-      setCartItems(items)
-      setStorageItem('cartItems', items)
+      saveData(items)
     }
   }
 
