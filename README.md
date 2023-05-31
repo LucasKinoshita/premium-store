@@ -6,7 +6,6 @@
 - Add to cart
 - Cart order
 - Product listing
-- Product page
 
 ### 📋 Requirements
 
