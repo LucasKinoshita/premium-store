@@ -1,8 +1,14 @@
 # Premium Store
 
-![Screenshot from 2023-05-31 17-18-56](https://github.com/LucasKinoshita/premium-store/assets/23041164/55dc94b7-38c5-427a-9967-c15611a20abf)
+![Screenshot from 2023-05-31 17-44-12](https://github.com/LucasKinoshita/premium-store/assets/23041164/b754d2bd-65a7-438f-b7d1-39d0e7e93730)
 
-### 📋 Pré-requisitos
+### 🚀 Features
+- Add to cart
+- Cart order
+- Product listing
+- Product page
+
+### 📋 Requirements
 
 - [Node.js](https://nodejs.org/)
 
@@ -28,7 +34,7 @@ yarn dev
 yarn start:api
 ```
 
-## ⚙️ Executando os testes
+## ⚙️ Running the tests
 
 ```
 yarn test
