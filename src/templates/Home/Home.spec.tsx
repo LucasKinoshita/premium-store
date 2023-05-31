@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import bannerItemsMock from 'components/BannerSlider/mock'
 import { productMock } from 'components/ProductCard/mock'
 import HomeTemplate from '.'
 
@@ -7,13 +6,6 @@ jest.mock('components/Header', () => ({
   __esModule: true,
   default: function Mock() {
     return <div data-testid="Mock Header" />
-  }
-}))
-
-jest.mock('components/BannerSlider', () => ({
-  __esModule: true,
-  default: function Mock() {
-    return <div data-testid="Mock BannerSlider" />
   }
 }))
 
@@ -26,12 +18,9 @@ jest.mock('components/ProductCard', () => ({
 
 describe('<HomeTemplate />', () => {
   it('should render the HomeTemplate with components', () => {
-    render(
-      <HomeTemplate bannerItems={bannerItemsMock} products={[productMock]} />
-    )
+    render(<HomeTemplate products={[productMock]} />)
 
     expect(screen.getByTestId('Mock Header')).toBeInTheDocument()
-    expect(screen.getByTestId('Mock BannerSlider')).toBeInTheDocument()
     expect(screen.getAllByTestId('Mock ProductCard')).toHaveLength(1)
   })
 })

@@ -24,9 +24,11 @@ const CartTemplate = () => {
             ))
           ) : (
             <NoProductsWrapper>
-              <NoProductsMessage>does not have products.</NoProductsMessage>
+              <NoProductsMessage>
+                Você não tem produtos ainda.
+              </NoProductsMessage>
               <BackToHomeButton href="/" aria-label="go to products">
-                Go to products
+                Voltar para loja.
               </BackToHomeButton>
             </NoProductsWrapper>
           )}
