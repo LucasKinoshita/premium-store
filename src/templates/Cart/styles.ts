@@ -4,6 +4,12 @@ import Link from 'next/link'
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1rem;
+  }
 `
 
 export const NoProductsWrapper = styled.div`
