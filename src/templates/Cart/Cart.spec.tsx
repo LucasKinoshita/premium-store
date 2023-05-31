@@ -48,4 +48,26 @@ describe('<CartTemplate />', () => {
     expect(screen.getAllByTestId('Mock CartItem')).toHaveLength(2)
     expect(screen.getByTestId('Mock Order')).toBeInTheDocument()
   })
+
+  it('should render the component no products', () => {
+    render(
+      <CartContext.Provider
+        value={{
+          items: [],
+          addToCart: jest.fn(),
+          deleteItem: jest.fn(),
+          updatedQuantity: jest.fn(),
+          clearCart: jest.fn(),
+          order: { subtotal: 0, total: 0 }
+        }}
+      >
+        <CartTemplate />
+      </CartContext.Provider>
+    )
+
+    expect(
+      screen.getByText(/você não tem produtos ainda./i)
+    ).toBeInTheDocument()
+    expect(screen.queryByTestId('Mock CartItem')).not.toBeInTheDocument()
+  })
 })
