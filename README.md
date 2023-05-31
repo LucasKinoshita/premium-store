@@ -1,6 +1,6 @@
 # Premium Store
 
-A simple e-commerce
+![Screenshot from 2023-05-31 17-18-56](https://github.com/LucasKinoshita/premium-store/assets/23041164/55dc94b7-38c5-427a-9967-c15611a20abf)
 
 ### 📋 Pré-requisitos
 
