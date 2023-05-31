@@ -6,6 +6,7 @@ export const OrderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1.6rem;
+  position: relative;
 `
 
 export const OrderTitle = styled.h2`
@@ -43,6 +44,44 @@ export const OrderButton = styled.button`
   height: 4rem;
   text-transform: uppercase;
   transition: 0.5s opacity ease-in;
+
+  &:hover {
+    opacity: 0.9;
+  }
+`
+
+export const CheckoutWrapper = styled(OrderWrapper)`
+  box-shadow: none;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  top: 0;
+  width: 100%;
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+`
+
+export const GoToHomeButton = styled.button`
+  background: #1d1d1d;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  height: 4rem;
+  text-transform: uppercase;
+  transition: 0.5s opacity ease-in;
+  margin-top: auto;
 
   &:hover {
     opacity: 0.9;

@@ -36,6 +36,7 @@ describe('<CartTemplate />', () => {
           addToCart: jest.fn(),
           deleteItem: jest.fn(),
           updatedQuantity: jest.fn(),
+          clearCart: jest.fn(),
           order: { subtotal: 15, total: 15 }
         }}
       >

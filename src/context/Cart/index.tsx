@@ -13,6 +13,7 @@ export type CartContextData = {
   order: Omit<OrderProps, 'onClick'>
   deleteItem: (id: number) => void
   updatedQuantity: (id: number, quantity: number) => void
+  clearCart: () => void
 }
 
 export const CartContextDefaultValues = {
@@ -20,7 +21,8 @@ export const CartContextDefaultValues = {
   order: { subtotal: 0, descount: 0, total: 0 },
   addToCart: () => null,
   deleteItem: () => null,
-  updatedQuantity: () => null
+  updatedQuantity: () => null,
+  clearCart: () => null
 }
 
 export const CartContext = createContext<CartContextData>(
@@ -105,6 +107,11 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     }
   }
 
+  const clearCart = () => {
+    localStorage.clear()
+    setCartItems([])
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -112,7 +119,8 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         order,
         addToCart,
         deleteItem,
-        updatedQuantity
+        updatedQuantity,
+        clearCart
       }}
     >
       {children}

@@ -36,7 +36,6 @@ const CartTemplate = () => {
           total={order.total}
           subtotal={order.subtotal}
           descount={order.descount}
-          onClick={() => ''}
         />
       </Wrapper>
     </Container>
