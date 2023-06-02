@@ -1,17 +1,12 @@
 # Premium Store
 
-![Screenshot from 2023-05-31 17-44-12](https://github.com/LucasKinoshita/premium-store/assets/23041164/1125e389-6066-4eec-b2eb-c6ef9c1afc71)
-
-### 🚀 Features
-- Add to cart
-- Cart order
-- Product listing
+A simple store with products and cart.
 
 ### 📋 Requirements
 
 - [Node.js](https://nodejs.org/)
 
-### 🔧 Instalação
+### 🔧 Get started
 
 #### Clone project
 ```
