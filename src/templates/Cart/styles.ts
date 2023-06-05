@@ -23,5 +23,6 @@ export const NoProductsMessage = styled.p`
 
 export const BackToHomeButton = styled(Link)`
   font-size: 1.6rem;
+  font-weight: bold;
   color: #1d1d1d;
 `

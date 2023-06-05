@@ -33,6 +33,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   return {
     props: {
+      id: data.id,
       name: data.name,
       description: data.description,
       imageUrl: data.imageUrl,

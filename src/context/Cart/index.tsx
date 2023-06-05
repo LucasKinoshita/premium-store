@@ -77,7 +77,9 @@ export const CartProvider = ({ children }: CartProviderProps) => {
 
   const addToCart = (data: ProductCardProps) => {
     const cardItemsCopy = [...cartItems]
+    console.log('before', cardItemsCopy)
     const item = cardItemsCopy.find((product) => product.id === data.id)
+    console.log('add to cart', item)
 
     if (!item) {
       cardItemsCopy.push({ ...data, quantity: 1 })
@@ -86,6 +88,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
       return
     }
 
+    console.log('after')
     item.quantity = item.quantity + 1
     saveData(cardItemsCopy)
   }

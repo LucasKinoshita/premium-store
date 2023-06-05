@@ -28,6 +28,6 @@ describe('<ProductTemplate />', () => {
     ).toBeInTheDocument()
 
     expect(screen.getByText('description text'))
-    expect(screen.getByLabelText(/add product to cart/i)).toBeInTheDocument()
+    expect(screen.getByLabelText(/add to cart/i)).toBeInTheDocument()
   })
 })
