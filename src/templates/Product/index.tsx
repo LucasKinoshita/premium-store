@@ -44,9 +44,9 @@ const ProductTemplate = ({
 
           <AddToCartButton
             type="button"
-            aria-label="add product to cart"
+            aria-label="add to cart"
             onClick={() =>
-              addToCart({ id, name, price, description, imageUrl })
+              addToCart({ id, imageUrl, name, price, description })
             }
           >
             Adicionar ao carrinho
