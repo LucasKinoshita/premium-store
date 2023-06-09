@@ -2,7 +2,6 @@ import { formatValueToCurrency } from 'utils/currency'
 import {
   CheckoutWrapper,
   GoToHomeButton,
-  OrderButton,
   OrderDescount,
   OrderDivider,
   OrderSubtotal,
@@ -13,6 +12,7 @@ import {
 import useCart from 'hooks/useCart'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import Button from 'components/Button'
 
 export type OrderProps = {
   subtotal: number
@@ -40,20 +40,20 @@ const Order = ({ subtotal, descount = 0, total }: OrderProps) => {
     <OrderWrapper>
       {isCheckout && (
         <CheckoutWrapper>
-          <h3>Compra feita com sucesso!</h3>
-          <p>Obrigado por comprar em nossa loja.</p>
+          <h3>Purchase made successfully!</h3>
+          <p>Thank you for shopping in our store.</p>
 
-          <GoToHomeButton onClick={goToHome}>Ir para home</GoToHomeButton>
+          <GoToHomeButton onClick={goToHome}>Go to home</GoToHomeButton>
         </CheckoutWrapper>
       )}
 
-      <OrderTitle>Resumo do pedido</OrderTitle>
+      <OrderTitle>Order</OrderTitle>
       <OrderSubtotal>
         Subtotal: <span>{formatValueToCurrency(subtotal)}</span>
       </OrderSubtotal>
 
       <OrderDescount>
-        Desconto: <span>{formatValueToCurrency(descount)}</span>
+        Discount: <span>{formatValueToCurrency(descount)}</span>
       </OrderDescount>
 
       <OrderDivider />
@@ -62,9 +62,9 @@ const Order = ({ subtotal, descount = 0, total }: OrderProps) => {
         Total <span>{formatValueToCurrency(total)}</span>
       </OrderTotal>
 
-      <OrderButton type="button" onClick={handleCheckout} aria-label="checkout">
-        Finalizar a compra
-      </OrderButton>
+      <Button onClick={handleCheckout} aria-label="checkout">
+        Checkout
+      </Button>
     </OrderWrapper>
   )
 }

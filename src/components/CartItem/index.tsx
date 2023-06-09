@@ -46,7 +46,7 @@ const CartItem = ({
             aria-label="delete cart item"
             onClick={() => deleteItem(id)}
           >
-            <TrashIcon />
+            <TrashIcon color="#FF0661" />
           </CartItemDeleteButton>
         </CartItemTitleWrapper>
 

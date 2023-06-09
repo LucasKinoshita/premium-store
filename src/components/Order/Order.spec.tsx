@@ -10,23 +10,21 @@ describe('<Order />', () => {
   it('should render the Order', () => {
     render(<Order total={160} subtotal={160} />)
 
-    expect(
-      screen.getByRole('heading', { name: /resumo do pedido/i })
-    ).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /order/i })).toBeInTheDocument()
 
     expect(screen.getByText(/subtotal:/i)).toBeInTheDocument()
     expect(
       screen.getAllByText(/R\$ 160,00/i, { collapseWhitespace: true })
     ).toHaveLength(2)
 
-    expect(screen.getByText(/desconto:/i)).toBeInTheDocument()
+    expect(screen.getByText(/discount:/i)).toBeInTheDocument()
     expect(
       screen.getByText(/R\$ 0,00/i, { collapseWhitespace: true })
     ).toBeInTheDocument()
 
     expect(screen.getByText(/total:/i)).toBeInTheDocument()
 
-    expect(screen.getByLabelText(/checkout/i)).toBeInTheDocument()
+    expect(screen.getByText(/checkout/i)).toBeInTheDocument()
   })
 
   it('should render checkout sucess when click in button checkout', async () => {
@@ -34,15 +32,15 @@ describe('<Order />', () => {
 
     expect(
       screen.queryByRole('heading', {
-        name: /compra feita com sucesso!/i
+        name: /purchase made successfully!/i
       })
     ).not.toBeInTheDocument()
 
-    userEvent.click(screen.getByText(/finalizar a compra/i))
+    userEvent.click(screen.getByText(/checkout/i))
 
     expect(
       await screen.findByRole('heading', {
-        name: /compra feita com sucesso!/i
+        name: /purchase made successfully!/i
       })
     ).toBeInTheDocument()
   })

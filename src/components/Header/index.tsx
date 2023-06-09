@@ -1,14 +1,22 @@
 import Link from 'next/link'
 import ShoppingCartIcon from 'components/ShoppingCartIcon'
-import { Wrapper } from './styles'
+import { CartItem, Container, Wrapper } from './styles'
 
 const Header = () => {
   return (
     <Wrapper>
-      <Link href="/">
-        <h1>Premium Store.</h1>
-      </Link>
-      <ShoppingCartIcon />
+      <Container>
+        <Link href="/">
+          <div>
+            <img src="/assets/logo.svg" alt="premium store" />
+          </div>
+        </Link>
+
+        <CartItem href="/cart">
+          <span>Cart</span>
+          <ShoppingCartIcon />
+        </CartItem>
+      </Container>
     </Wrapper>
   )
 }

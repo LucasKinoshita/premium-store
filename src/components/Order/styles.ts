@@ -5,17 +5,21 @@ export const OrderWrapper = styled.div`
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
   padding: 1.6rem;
   position: relative;
 `
 
 export const OrderTitle = styled.h2`
+  font-family: var(--font-title);
+  font-size: 2rem;
   text-transform: uppercase;
 `
 export const OrderSubtotal = styled.span`
   align-items: center;
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-family: var(--font-text);
   justify-content: space-between;
   padding-top: 1rem;
 `
@@ -35,19 +39,6 @@ export const OrderDivider = styled.hr`
 export const OrderTotal = styled(OrderSubtotal)`
   padding-top: 0.5rem;
   padding-bottom: 2rem;
-`
-export const OrderButton = styled.button`
-  background: #51b853;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  height: 4rem;
-  text-transform: uppercase;
-  transition: 0.5s opacity ease-in;
-
-  &:hover {
-    opacity: 0.9;
-  }
 `
 
 export const CheckoutWrapper = styled(OrderWrapper)`

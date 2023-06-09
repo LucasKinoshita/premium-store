@@ -14,33 +14,34 @@ const CartTemplate = () => {
   const { items, order } = useCart()
 
   return (
-    <Container>
+    <>
       <Header />
-      <Wrapper>
-        <div>
-          {items.length ? (
-            items.map((product, index) => (
-              <CartItem key={`product-${index}`} {...product} />
-            ))
-          ) : (
-            <NoProductsWrapper>
-              <NoProductsMessage>
-                Você não tem produtos ainda.
-              </NoProductsMessage>
-              <BackToHomeButton href="/" aria-label="go to products">
-                Voltar para loja.
-              </BackToHomeButton>
-            </NoProductsWrapper>
-          )}
-        </div>
 
-        <Order
-          total={order.total}
-          subtotal={order.subtotal}
-          descount={order.descount}
-        />
-      </Wrapper>
-    </Container>
+      <Container>
+        <Wrapper>
+          <div>
+            {items.length ? (
+              items.map((product, index) => (
+                <CartItem key={`product-${index}`} {...product} />
+              ))
+            ) : (
+              <NoProductsWrapper>
+                <NoProductsMessage>You have no products yet.</NoProductsMessage>
+                <BackToHomeButton href="/" aria-label="go to products">
+                  Back to shop.
+                </BackToHomeButton>
+              </NoProductsWrapper>
+            )}
+          </div>
+
+          <Order
+            total={order.total}
+            subtotal={order.subtotal}
+            descount={order.descount}
+          />
+        </Wrapper>
+      </Container>
+    </>
   )
 }
 
