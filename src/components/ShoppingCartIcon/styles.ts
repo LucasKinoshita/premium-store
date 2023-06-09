@@ -8,15 +8,16 @@ export const Wrapper = styled.div`
 `
 export const Badge = styled.span`
   align-items: center;
-  background-color: #1d1d1d;
+  background-color: var(--black-medium);
   border-radius: 50%;
-  color: #fff;
+  color: var(--gray-light);
   display: flex;
-  font-size: 1rem;
-  height: 1.5rem;
+  font-size: 1.5rem;
+  font-family: var(--font-text);
+  height: 2rem;
   justify-content: center;
   position: absolute;
-  right: -0.4rem;
-  top: -0.4rem;
-  width: 1.5rem;
+  right: -0.8rem;
+  top: -1.5rem;
+  width: 2rem;
 `

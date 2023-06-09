@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import useCart from 'hooks/useCart'
-import { Cart as CartIcon } from '@styled-icons/ionicons-outline'
 import { formatValueToCurrency } from 'utils/currency'
+import Button from 'components/Button'
 import {
+  ButtonsWrapper,
+  IconButton,
   ImageWrapper,
-  ProductInfoWrapper,
-  ProductName,
-  ProductPrice,
+  InfoWrapper,
+  TitleWrapper,
   Wrapper
 } from './styles'
 
@@ -25,7 +26,7 @@ const ProductCard = ({
   price,
   description
 }: ProductCardProps) => {
-  const { addToCart } = useCart()
+  const { addToCart, buyNow } = useCart()
 
   return (
     <Wrapper>
@@ -35,20 +36,29 @@ const ProductCard = ({
         </ImageWrapper>
       </Link>
 
-      <ProductInfoWrapper>
-        <Link href={`/product/${id}`}>
-          <ProductName>{name}</ProductName>
-          <ProductPrice>{formatValueToCurrency(price)}</ProductPrice>
-        </Link>
+      <InfoWrapper>
+        <TitleWrapper>
+          <h2>{name}</h2>
+          <span>{formatValueToCurrency(price)}</span>
+        </TitleWrapper>
+        <span>{description}</span>
 
-        <button
-          type="button"
-          aria-label="add to cart"
-          onClick={() => addToCart({ id, imageUrl, name, price, description })}
-        >
-          <CartIcon />
-        </button>
-      </ProductInfoWrapper>
+        <ButtonsWrapper>
+          <Button
+            onClick={() => buyNow({ id, imageUrl, name, price, description })}
+          >
+            Buy now
+          </Button>
+          <IconButton
+            arial-label="add to cart"
+            onClick={() =>
+              addToCart({ id, imageUrl, name, price, description })
+            }
+          >
+            <img src="/assets/add-cart.svg" alt="add to cart icon" />
+          </IconButton>
+        </ButtonsWrapper>
+      </InfoWrapper>
     </Wrapper>
   )
 }

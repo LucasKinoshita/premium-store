@@ -2,6 +2,7 @@ import { createContext, useCallback, useEffect, useState } from 'react'
 import { getStorageItem, setStorageItem } from 'utils/localStorage'
 import { ProductCardProps } from 'components/ProductCard'
 import { OrderProps } from 'components/Order'
+import { useRouter } from 'next/router'
 
 type ItemProps = ProductCardProps & {
   quantity: number
@@ -10,6 +11,7 @@ type ItemProps = ProductCardProps & {
 export type CartContextData = {
   items: ItemProps[]
   addToCart: (data: ProductCardProps) => void
+  buyNow: (data: ProductCardProps) => void
   order: Omit<OrderProps, 'onClick'>
   deleteItem: (id: number) => void
   updatedQuantity: (id: number, quantity: number) => void
@@ -20,6 +22,7 @@ export const CartContextDefaultValues = {
   items: [],
   order: { subtotal: 0, descount: 0, total: 0 },
   addToCart: () => null,
+  buyNow: () => null,
   deleteItem: () => null,
   updatedQuantity: () => null,
   clearCart: () => null
@@ -34,6 +37,7 @@ export type CartProviderProps = {
 }
 
 export const CartProvider = ({ children }: CartProviderProps) => {
+  const { push } = useRouter()
   const [cartItems, setCartItems] = useState<ItemProps[]>([])
   const [order, setOrder] = useState<Omit<OrderProps, 'onClick'>>(
     CartContextDefaultValues.order
@@ -93,6 +97,11 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     saveData(cardItemsCopy)
   }
 
+  const buyNow = (data: ProductCardProps) => {
+    addToCart(data)
+    push('/cart')
+  }
+
   const deleteItem = (id: number) => {
     const cardItemsCopy = [...cartItems]
 
@@ -121,6 +130,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         items: cartItems,
         order,
         addToCart,
+        buyNow,
         deleteItem,
         updatedQuantity,
         clearCart

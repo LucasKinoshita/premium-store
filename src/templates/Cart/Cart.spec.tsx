@@ -34,6 +34,7 @@ describe('<CartTemplate />', () => {
             { ...productsMock[1], quantity: 1 }
           ],
           addToCart: jest.fn(),
+          buyNow: jest.fn(),
           deleteItem: jest.fn(),
           updatedQuantity: jest.fn(),
           clearCart: jest.fn(),
@@ -55,6 +56,7 @@ describe('<CartTemplate />', () => {
         value={{
           items: [],
           addToCart: jest.fn(),
+          buyNow: jest.fn(),
           deleteItem: jest.fn(),
           updatedQuantity: jest.fn(),
           clearCart: jest.fn(),
@@ -65,9 +67,7 @@ describe('<CartTemplate />', () => {
       </CartContext.Provider>
     )
 
-    expect(
-      screen.getByText(/você não tem produtos ainda./i)
-    ).toBeInTheDocument()
+    expect(screen.getByText(/You have no products yet./i)).toBeInTheDocument()
     expect(screen.queryByTestId('Mock CartItem')).not.toBeInTheDocument()
   })
 })

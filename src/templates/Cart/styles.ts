@@ -15,14 +15,17 @@ export const Wrapper = styled.div`
 export const NoProductsWrapper = styled.div`
   display: flex;
   gap: 0.5rem;
+  margin-top: 1rem;
 `
 
 export const NoProductsMessage = styled.p`
   font-size: 1.6rem;
+  font-family: var(--font-text);
 `
 
 export const BackToHomeButton = styled(Link)`
   font-size: 1.6rem;
   font-weight: bold;
-  color: #1d1d1d;
+  color: var(--black-medium);
+  font-family: var(--font-text);
 `

@@ -27,6 +27,11 @@ export const CartItemTitleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+
+  h2 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+  }
 `
 
 export const CartItemDeleteButton = styled.button`
@@ -40,7 +45,9 @@ export const CartItemDeleteButton = styled.button`
 `
 
 export const CartItemDescription = styled.p`
+  color: var(--black-medium);
   font-size: 1.2rem;
+  font-family: var(--font-text);
   margin-bottom: 1.5rem;
 `
 
@@ -55,6 +62,7 @@ export const CartItemQuantity = styled.input`
   border-radius: 0.5rem;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
     rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  font-family: var(--font-text);
   height: 3rem;
   padding-left: 1rem;
   width: 5rem;
@@ -63,4 +71,5 @@ export const CartItemQuantity = styled.input`
 export const CartItemPrice = styled.span`
   font-size: 1.6rem;
   font-weight: bold;
+  font-family: var(--font-title);
 `

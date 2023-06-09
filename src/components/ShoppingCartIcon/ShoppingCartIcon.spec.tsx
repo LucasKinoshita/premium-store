@@ -7,7 +7,7 @@ describe('<ShoppingCartIcon />', () => {
   it('should render ShoppingCartIcon without badge', () => {
     render(<ShoppingCartIcon />)
 
-    expect(screen.getByLabelText(/shopping cart/i)).toBeInTheDocument()
+    expect(screen.getByAltText(/shopping cart icon/i)).toBeInTheDocument()
     expect(screen.queryByLabelText(/cart items/i)).not.toBeInTheDocument()
   })
 
@@ -19,6 +19,7 @@ describe('<ShoppingCartIcon />', () => {
           addToCart: jest.fn(),
           deleteItem: jest.fn(),
           updatedQuantity: jest.fn(),
+          clearCart: jest.fn(),
           order: { subtotal: 15, total: 15 }
         }}
       >
@@ -26,7 +27,7 @@ describe('<ShoppingCartIcon />', () => {
       </CartContext.Provider>
     )
 
-    expect(screen.getByLabelText(/shopping cart/i)).toBeInTheDocument()
+    expect(screen.getByAltText(/shopping cart icon/i)).toBeInTheDocument()
     expect(screen.queryByLabelText(/cart items/i)).toBeInTheDocument()
   })
 })

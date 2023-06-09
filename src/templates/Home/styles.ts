@@ -4,7 +4,7 @@ export const ProductsWrapper = styled.section`
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 4rem;
   justify-content: center;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -12,7 +12,7 @@ export const ProductsWrapper = styled.section`
 export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
-  max-width: 100rem;
+  max-width: 130rem;
   padding-left: 5rem;
   padding-right: 5rem;
   width: 100%;
