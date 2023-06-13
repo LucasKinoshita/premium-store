@@ -13,12 +13,16 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 130rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding: 0 2rem;
   width: 100%;
+`
 
-  @media screen and (max-width: 768px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  main {
+    flex: 1;
   }
 `

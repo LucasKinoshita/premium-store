@@ -2,6 +2,9 @@ import Head from 'next/head'
 import { AppProps } from 'next/app'
 import { CartProvider } from 'context/Cart'
 import GlobalStyles from 'styles/global'
+import Footer from 'components/Footer'
+import Header from 'components/Header'
+import { Wrapper } from 'templates/Home/styles'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -18,7 +21,13 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <CartProvider>
         <GlobalStyles />
-        <Component {...pageProps} />
+        <Wrapper>
+          <Header />
+          <main>
+            <Component {...pageProps} />
+          </main>
+          <Footer />
+        </Wrapper>
       </CartProvider>
     </>
   )

@@ -1,4 +1,3 @@
-import Header from 'components/Header'
 import ProductCard from 'components/ProductCard'
 import { ProductCardProps } from 'components/ProductCard'
 import { ProductsWrapper, Container } from './styles'
@@ -11,7 +10,6 @@ export type HomeTemplateProps = {
 const HomeTemplate = ({ products }: HomeTemplateProps) => {
   return (
     <>
-      <Header />
       <Banner />
       <Container>
         <ProductsWrapper id="products">

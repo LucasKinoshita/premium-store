@@ -3,13 +3,6 @@ import { CartContext } from 'context/Cart'
 import { productsMock } from 'components/ProductCard/mock'
 import CartTemplate from '.'
 
-jest.mock('components/Header', () => ({
-  __esModule: true,
-  default: function Mock() {
-    return <div data-testid="Mock Header" />
-  }
-}))
-
 jest.mock('components/CartItem', () => ({
   __esModule: true,
   default: function Mock() {
@@ -45,7 +38,6 @@ describe('<CartTemplate />', () => {
       </CartContext.Provider>
     )
 
-    expect(screen.getByTestId('Mock Header')).toBeInTheDocument()
     expect(screen.getAllByTestId('Mock CartItem')).toHaveLength(2)
     expect(screen.getByTestId('Mock Order')).toBeInTheDocument()
   })

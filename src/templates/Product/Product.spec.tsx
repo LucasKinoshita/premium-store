@@ -2,18 +2,10 @@ import { render, screen } from '@testing-library/react'
 import { productMock } from 'components/ProductCard/mock'
 import ProductTemplate from '.'
 
-jest.mock('components/Header', () => ({
-  __esModule: true,
-  default: function Mock() {
-    return <div data-testid="Mock Header" />
-  }
-}))
-
 describe('<ProductTemplate />', () => {
   it('should render the ProductTemplate', () => {
     render(<ProductTemplate {...productMock} />)
 
-    expect(screen.getByTestId('Mock Header')).toBeInTheDocument()
     expect(screen.getByLabelText(/back to home/i)).toBeInTheDocument()
     expect(screen.getByRole('img')).toBeInTheDocument()
 
