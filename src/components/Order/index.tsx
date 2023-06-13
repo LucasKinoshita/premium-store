@@ -1,7 +1,6 @@
 import { formatValueToCurrency } from 'utils/currency'
 import {
   CheckoutWrapper,
-  GoToHomeButton,
   OrderDescount,
   OrderDivider,
   OrderSubtotal,
@@ -43,28 +42,32 @@ const Order = ({ subtotal, descount = 0, total }: OrderProps) => {
           <h3>Purchase made successfully!</h3>
           <p>Thank you for shopping in our store.</p>
 
-          <GoToHomeButton onClick={goToHome}>Go to home</GoToHomeButton>
+          <Button onClick={goToHome}>Go to home</Button>
         </CheckoutWrapper>
       )}
 
-      <OrderTitle>Order</OrderTitle>
-      <OrderSubtotal>
-        Subtotal: <span>{formatValueToCurrency(subtotal)}</span>
-      </OrderSubtotal>
+      {!isCheckout && (
+        <>
+          <OrderTitle>Order</OrderTitle>
+          <OrderSubtotal>
+            Subtotal: <span>{formatValueToCurrency(subtotal)}</span>
+          </OrderSubtotal>
 
-      <OrderDescount>
-        Discount: <span>{formatValueToCurrency(descount)}</span>
-      </OrderDescount>
+          <OrderDescount>
+            Discount: <span>{formatValueToCurrency(descount)}</span>
+          </OrderDescount>
 
-      <OrderDivider />
+          <OrderDivider />
 
-      <OrderTotal>
-        Total <span>{formatValueToCurrency(total)}</span>
-      </OrderTotal>
+          <OrderTotal>
+            Total <span>{formatValueToCurrency(total)}</span>
+          </OrderTotal>
 
-      <Button onClick={handleCheckout} aria-label="checkout">
-        Checkout
-      </Button>
+          <Button onClick={handleCheckout} aria-label="checkout">
+            Checkout
+          </Button>
+        </>
+      )}
     </OrderWrapper>
   )
 }

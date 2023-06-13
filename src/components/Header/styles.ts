@@ -8,19 +8,12 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 130rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
   width: 100%;
 
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0;
-
-  @media screen and (max-width: 768px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+  padding: 2rem;
 `
 
 export const CartItem = styled(Link)`

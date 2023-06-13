@@ -43,38 +43,22 @@ export const OrderTotal = styled(OrderSubtotal)`
 
 export const CheckoutWrapper = styled(OrderWrapper)`
   box-shadow: none;
-  background: #fff;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   height: 100%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  top: 0;
+  margin: 0;
+  padding: 0;
   width: 100%;
 
   h3 {
-    font-size: 1.6rem;
+    color: var(--black-medium);
+    font-family: var(--font-title);
+    font-size: 2rem;
   }
 
   p {
-    font-size: 1.2rem;
-  }
-`
-
-export const GoToHomeButton = styled.button`
-  background: #1d1d1d;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  height: 4rem;
-  text-transform: uppercase;
-  transition: 0.5s opacity ease-in;
-  margin-top: auto;
-
-  &:hover {
-    opacity: 0.9;
+    font-family: var(--font-text);
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
   }
 `
