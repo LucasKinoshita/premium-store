@@ -103,10 +103,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - GitHub: [@LucasKinoshita](https://github.com/LucasKinoshita)
 
-## 📞 Support
-
-For support, email support@example.com or open an issue on GitHub.
-
 ---
 
 **Made with ❤️ by Lucas Kinoshita**
